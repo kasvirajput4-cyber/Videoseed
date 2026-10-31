@@ -33,20 +33,18 @@
             overflow-x: hidden;
         }
 
-        /* Navbar */
         nav {
             width: 100%;
             max-width: 1200px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 35px 20px;
+            padding: 30px 20px;
         }
 
         .logo {
             font-size: 22px;
             font-weight: 700;
-            letter-spacing: -0.5px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -65,55 +63,17 @@
             font-weight: 900;
         }
 
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-main);
-        }
-
-        .auth-buttons button {
-            background: transparent;
-            color: var(--text-main);
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        .auth-buttons button:hover {
-            opacity: 0.8;
-        }
-
-        .auth-buttons .signup-btn {
-            background-color: var(--accent-green);
-            color: #070907;
-            border-radius: 30px;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-
-        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 100px 20px 60px;
+            padding: 60px 20px 30px;
             max-width: 800px;
             width: 100%;
         }
 
         .hero h1 {
-            font-size: 64px;
+            font-size: 52px;
             font-weight: 800;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
+            margin-bottom: 16px;
             line-height: 1.1;
             background: linear-gradient(to bottom, #ffffff 70%, rgba(255,255,255,0.7));
             -webkit-background-clip: text;
@@ -122,26 +82,43 @@
 
         .hero p {
             color: var(--text-muted);
-            font-size: 18px;
-            margin-bottom: 60px;
-            line-height: 1.5;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 16px;
+            margin-bottom: 40px;
         }
 
-        /* Generator Input Section */
+        .config-bar {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .api-input {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 480px;
+            font-size: 13px;
+            outline: none;
+            text-align: center;
+        }
+
+        .api-input:focus {
+            border-color: var(--accent-green);
+        }
+
         .input-group {
             display: flex;
             align-items: center;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 30px;
-            padding: 10px 10px 10px 24px;
+            padding: 8px 10px 8px 20px;
             backdrop-filter: blur(20px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            margin-bottom: 12px;
-            transition: border-color 0.2s;
+            margin-bottom: 25px;
         }
 
         .input-group:focus-within {
@@ -153,35 +130,21 @@
             background: transparent;
             border: none;
             color: var(--text-main);
-            padding: 12px 16px;
-            font-size: 16px;
+            padding: 10px;
+            font-size: 15px;
             outline: none;
-        }
-
-        .input-group input[type="text"]::placeholder {
-            color: var(--text-muted);
         }
 
         .settings-select {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.4);
             color: var(--text-main);
             border: 1px solid var(--glass-border);
-            padding: 12px 16px;
-            border-radius: 20px;
-            margin: 0 6px;
+            padding: 10px 14px;
+            border-radius: 18px;
+            margin: 0 4px;
             outline: none;
-            font-size: 14px;
+            font-size: 13px;
             cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23889988' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            background-size: 12px;
-            padding-right: 32px;
-        }
-
-        .settings-select:hover {
-            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .generate-btn {
@@ -189,13 +152,13 @@
             color: #070907;
             border: none;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 46px;
+            height: 46px;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             transition: transform 0.2s;
         }
@@ -204,53 +167,17 @@
             transform: scale(1.05);
         }
 
-        /* Mode Selectors */
-        .mode-selectors {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 80px;
-        }
-
-        .mode-option {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            color: var(--text-muted);
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.2s;
-        }
-
-        .mode-option:hover {
-            border-color: rgba(255, 255, 255, 0.15);
-            color: var(--text-main);
-        }
-
-        .mode-option.active {
-            background: rgba(153, 255, 51, 0.1);
-            border-color: var(--accent-green);
-            color: var(--accent-green);
-        }
-
-        /* Result Area */
         .preview-gallery {
             display: flex;
             justify-content: center;
-            gap: 24px;
             width: 100%;
-            max-width: 1000px;
-            padding: 0 20px;
+            max-width: 800px;
+            padding: 0 20px 40px;
         }
 
         .preview-box {
-            flex: 1;
-            aspect-ratio: 16 / 9;
+            width: 100%;
+            min-height: 360px;
             background: var(--glass-bg);
             border-radius: 20px;
             border: 1px solid var(--glass-border);
@@ -260,35 +187,31 @@
             align-items: center;
             color: var(--text-muted);
             font-size: 14px;
-            font-weight: 500;
             position: relative;
             overflow: hidden;
         }
 
-        .preview-box::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .preview-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
             border-radius: 20px;
-            pointer-events: none;
         }
 
         .loading-spinner {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border: 2px solid var(--glass-border);
             border-top-color: var(--accent-green);
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
-            margin-bottom: 16px;
-            display: none; /* Show this when generating */
+            margin-bottom: 14px;
+            display: none;
         }
 
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-
     </style>
 </head>
 <body>
@@ -297,21 +220,15 @@
         <div class="logo">
             <div class="logo-icon">V</div> Vibe
         </div>
-        <div class="nav-links">
-            <a href="#">Showcase</a>
-            <a href="#">Models</a>
-            <a href="#">Pricing</a>
-            <a href="#">API</a>
-        </div>
-        <div class="auth-buttons">
-            <button>Log in</button>
-            <button class="signup-btn">Sign up</button>
-        </div>
     </nav>
 
     <div class="hero">
         <h1>Create Videos from Text</h1>
-        <p>Turn your imagination into cinematic videos using the most advanced AI video generation models.</p>
+        <p>Seedance 2.5 Powered AI Video Generator</p>
+
+        <div class="config-bar">
+            <input type="password" id="apiKeyInput" class="api-input" placeholder="Paste your BytePlus API Key here (Bearer token)">
+        </div>
 
         <div class="input-container">
             <div class="input-group">
@@ -325,58 +242,136 @@
                 
                 <select id="durationSelect" class="settings-select">
                     <option value="5">5s</option>
-                    <option value="11">11s</option>
+                    <option value="11" selected>11s</option>
+                    <option value="30">30s</option>
                 </select>
 
-                <button class="generate-btn" onclick="startGeneration()">→</button>
+                <button class="generate-btn" id="genBtn" onclick="startGeneration()">→</button>
             </div>
         </div>
     </div>
 
-    <div class="mode-selectors">
-        <div class="mode-option active">
-            🎥 Video Generator (Seedance 2.5)
-        </div>
-        <div class="mode-option">
-            🪄 AI Editor
-        </div>
-    </div>
-
     <div class="preview-gallery">
-        <div class="preview-box">
-            <div class="loading-spinner"></div>
-            <span id="placeholderText">Your generated video will appear here</span>
+        <div class="preview-box" id="previewArea">
+            <div class="loading-spinner" id="spinner"></div>
+            <span id="statusText">Your generated video will appear here</span>
         </div>
     </div>
 
     <script>
-        function startGeneration() {
-            const prompt = document.getElementById('promptInput').value;
+        async function startGeneration() {
+            const apiKey = document.getElementById('apiKeyInput').value.trim();
+            const prompt = document.getElementById('promptInput').value.trim();
             const ratio = document.getElementById('ratioSelect').value;
-            const duration = document.getElementById('durationSelect').value;
+            const duration = parseInt(document.getElementById('durationSelect').value, 10);
             
-            if (!prompt) {
-                alert('Please enter a description for your video.');
+            const spinner = document.getElementById('spinner');
+            const statusText = document.getElementById('statusText');
+            const previewArea = document.getElementById('previewArea');
+
+            if (!apiKey) {
+                alert('कृपया अपनी BytePlus API Key डालें।');
                 return;
             }
 
-            // Simple UI state change during 'generation'
-            const spinner = document.querySelector('.loading-spinner');
-            const placeholder = document.getElementById('placeholderText');
-            
+            if (!prompt) {
+                alert('कृपया वीडियो का प्रॉम्प्ट लिखें।');
+                return;
+            }
+
             spinner.style.display = 'block';
-            placeholder.textContent = 'Generating your video...';
+            statusText.textContent = 'Task submit ho raha hai...';
 
-            console.log(`Generating: "${prompt}", Ratio: ${ratio}, Duration: ${duration}s`);
+            try {
+                // Task Submit Request
+                const response = await fetch('https://ark.ap-southeast.bytepluses.com/api/v3/contents/generations/tasks', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: "dreamina-seedance-2-5-260628",
+                        content: [
+                            {
+                                type: "text",
+                                text: prompt
+                            }
+                        ],
+                        generate_audio: true,
+                        ratio: ratio,
+                        duration: duration,
+                        watermark: false
+                    })
+                });
 
-            // Simulate API delay
-            setTimeout(() => {
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || 'API Request failed');
+                }
+
+                const taskId = data.id || (data.data && data.data.id);
+                if (!taskId) {
+                    throw new Error('Task ID prapt nahi hui.');
+                }
+
+                statusText.textContent = `Video generate ho rahi hai (Task ID: ${taskId}). Kripya intezar karein...`;
+                
+                // Status Poll loop
+                pollTaskStatus(taskId, apiKey);
+
+            } catch (error) {
                 spinner.style.display = 'none';
-                placeholder.textContent = 'Generation complete (Simulation)';
-                alert('Generation complete!');
-            }, 3000);
+                statusText.textContent = 'Error: ' + error.message;
+                alert('Error: ' + error.message);
+            }
+        }
+
+        async function pollTaskStatus(taskId, apiKey) {
+            const spinner = document.getElementById('spinner');
+            const statusText = document.getElementById('statusText');
+            const previewArea = document.getElementById('previewArea');
+
+            const interval = setInterval(async () => {
+                try {
+                    const res = await fetch(`https://ark.ap-southeast.bytepluses.com/api/v3/contents/generations/tasks/${taskId}`, {
+                        headers: {
+                            'Authorization': `Bearer ${apiKey}`
+                        }
+                    });
+
+                    const resultData = await res.json();
+                    const status = resultData.status || (resultData.data && resultData.data.status);
+
+                    if (status === 'succeeded' || status === 'SUCCESS') {
+                        clearInterval(interval);
+                        spinner.style.display = 'none';
+                        statusText.style.display = 'none';
+
+                        const videoUrl = resultData.content?.[0]?.video_url?.url || 
+                                         resultData.data?.content?.[0]?.video_url?.url;
+
+                        if (videoUrl) {
+                            previewArea.innerHTML = `<video src="${videoUrl}" controls autoplay loop></video>`;
+                        } else {
+                            statusText.style.display = 'block';
+                            statusText.textContent = 'Video ready hai par link display nahi ho saka.';
+                        }
+                    } else if (status === 'failed' || status === 'FAILED') {
+                        clearInterval(interval);
+                        spinner.style.display = 'none';
+                        statusText.textContent = 'Video generation fail ho gaya.';
+                    } else {
+                        statusText.textContent = `Progress me hai (${status})...`;
+                    }
+                } catch (e) {
+                    clearInterval(interval);
+                    spinner.style.display = 'none';
+                    statusText.textContent = 'Status check karne me error aaya: ' + e.message;
+                }
+            }, 5000);
         }
     </script>
 </body>
-          </html>
-          
+</html>
